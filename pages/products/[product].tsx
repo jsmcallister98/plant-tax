@@ -9,7 +9,7 @@ export interface ProductPageProps extends React.HTMLProps<HTMLDivElement> {
 
 const ProductPage: FC<ProductPageProps> = ({ product }) => {
   return (
-    <div>
+    <div className="min-h-screen py-12 sm:pt-20">
       <ProductPageContent product={product} />
     </div>
   );

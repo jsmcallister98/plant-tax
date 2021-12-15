@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import ProductCard from "@components/ProductCard";
+import ProductCard from "./ProductCard";
 
 export interface ProductListProps extends React.HTMLProps<HTMLDivElement> {
   products: any;
