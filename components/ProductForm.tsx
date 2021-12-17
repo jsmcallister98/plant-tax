@@ -1,12 +1,15 @@
 import { FC, useState, useContext } from "react";
 import { formatter } from "@utils/helpers";
 import ProductOptions from "./ProductOptions";
+import { CartContext } from "../context/shopContext";
 
 export interface ProductFormProps extends React.HTMLProps<HTMLDivElement> {
   product: any;
 }
 
 const ProductForm: FC<ProductFormProps> = ({ product }) => {
+  const { addToCart } = useContext(CartContext);
+
   const allVariantOptions = product.variants.edges?.map((variant: any) => {
     const allOptions: any = {};
 
@@ -18,7 +21,7 @@ const ProductForm: FC<ProductFormProps> = ({ product }) => {
       id: variant.node.id,
       title: product.title,
       handle: product.handle,
-      image: variant.node.image?.origianlSrc,
+      image: variant.node.image?.originalSrc,
       options: allOptions,
       variantTitle: variant.node.title,
       variantPrice: variant.node.priceV2.amount,
@@ -35,9 +38,19 @@ const ProductForm: FC<ProductFormProps> = ({ product }) => {
   const [selectedOptions, setSelectedOptions] = useState(defaultValues);
 
   function setOptions(name: any, value: any) {
-    console.log(name, value);
     setSelectedOptions((prevState: any) => {
       return { ...prevState, [name]: value };
+    });
+
+    const selection = {
+      ...selectedOptions,
+      [name]: value,
+    };
+
+    allVariantOptions.map((item: any) => {
+      if (JSON.stringify(item.options) === JSON.stringify(selection)) {
+        setSelectedVariant(item);
+      }
     });
   }
 
@@ -56,7 +69,10 @@ const ProductForm: FC<ProductFormProps> = ({ product }) => {
           setOptions={setOptions}
         />
       ))}
-      <button className="bg-black rounded-lg text-white px-2 py-3 hover:bg-gray-800">
+      <button
+        onClick={() => addToCart(selectedVariant)}
+        className="bg-black rounded-lg text-white px-2 py-3 hover:bg-gray-800"
+      >
         Add To Cart
       </button>
     </div>
