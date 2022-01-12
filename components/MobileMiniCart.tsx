@@ -2,15 +2,15 @@ import { motion, useCycle } from "framer-motion";
 import { useRef, useContext } from "react";
 import { CartContext } from "../context/shopContext";
 
-const Path = (props: any) => (
-  <motion.path
-    fill="transparent"
-    strokeWidth="3"
-    stroke="hsl(0, 0%, 18%)"
-    strokeLinecap="round"
-    {...props}
-  />
-);
+// const Path = (props: any) => (
+//   <motion.path
+//     fill="transparent"
+//     strokeWidth="3"
+//     stroke="hsl(0, 0%, 18%)"
+//     strokeLinecap="round"
+//     {...props}
+//   />
+// );
 
 export const MenuToggle = ({ toggle, numItems }: any) => (
   <button
