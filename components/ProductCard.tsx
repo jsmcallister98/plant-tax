@@ -16,7 +16,7 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
   return (
     <Link href={`/products/${handle}`}>
       <a className="group">
-        <div className="w-full bg-gray-200 rounded-3xl overflow-hidden">
+        <div className="w-full relative bg-gray-200 dark:bg-gray-700 rounded-3xl overflow-hidden">
           <div className="relative group-hover:opacity-75 h-72">
             <Image
               src={originalSrc}
@@ -26,8 +26,12 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
             ></Image>
           </div>
         </div>
-        <h3 className="mt-4 text-lg font-medium text-gray-900">{title}</h3>
-        <p className="mt-1 text-sm text-gray-700">{formatter.format(price)}</p>
+        <h3 className="mt-4 text-lg font-medium text-gray-900 dark:text-white">
+          {title}
+        </h3>
+        <p className="mt-1 text-sm text-gray-700 dark:text-slate-300">
+          {formatter.format(price)}
+        </p>
       </a>
     </Link>
   );

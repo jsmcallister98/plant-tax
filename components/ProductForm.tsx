@@ -55,7 +55,7 @@ const ProductForm: FC<ProductFormProps> = ({ product }) => {
   }
 
   return (
-    <div className="rounded-2xl p-4 shadow-lg flex flex-col w-full md:w-1/3">
+    <div className="rounded-2xl bg-white dark:bg-slate-700 p-4 shadow-lg flex flex-col w-full md:w-1/3">
       <h2 className="text-2xl font-bold">{product.title}</h2>
       <span className="pb-6">
         {formatter.format(product.variants.edges[0].node.priceV2.amount)}
@@ -71,7 +71,7 @@ const ProductForm: FC<ProductFormProps> = ({ product }) => {
       ))}
       <button
         onClick={() => addToCart(selectedVariant)}
-        className="bg-black rounded-lg text-white px-2 py-3 hover:bg-gray-800"
+        className="bg-black text-white dark:bg-slate-300 dark:text-black rounded-lg px-2 py-3 hover:bg-gray-800"
       >
         Add To Cart
       </button>
