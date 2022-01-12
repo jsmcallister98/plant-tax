@@ -1,4 +1,4 @@
-import { FC } from "react";
+import React, { FC } from "react";
 import Image from "next/image";
 import ProductForm from "./ProductForm";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -32,10 +32,12 @@ const ProductPageContent: FC<ProductPageContentProps> = ({ product }) => {
       <div className="w-full mad-w-md border bg-white rounded-2xl overflow-hidden shadow-lg md:w-1/2">
         <div className="relative h-96 w-full">
           <Swiper
-            style={{
-              "--swiper-navigation-color": "#000",
-              "--swiper-pagination-color": "#000",
-            }}
+            style={
+              {
+                "--swiper-navigation-color": "#000",
+                "--swiper-pagination-color": "#000",
+              } as React.CSSProperties
+            }
             navigation
             pagination={{ clickable: true }}
             className="h-96 rounded-2xl"
