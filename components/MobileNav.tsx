@@ -18,66 +18,47 @@ import ThemeToggle from "./ThemeToggle";
 
 const solutions = [
   {
-    name: "Analytics",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
-    href: "#",
+    name: "All Products",
+    href: "/products",
     icon: ChartBarIcon,
   },
   {
-    name: "Engagement",
-    description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
+    name: "Hoodies",
+    href: "/products/hoodies",
     icon: CursorClickIcon,
   },
   {
-    name: "Security",
-    description: "Your customers' data will be safe and secure.",
-    href: "#",
+    name: "Sweaters",
+    href: "/products/sweaters",
     icon: ShieldCheckIcon,
   },
   {
-    name: "Integrations",
-    description: "Connect with third-party tools that you're already using.",
-    href: "#",
+    name: "Tees",
+    href: "/products/tees",
     icon: ViewGridIcon,
   },
   {
-    name: "Automations",
-    description:
-      "Build strategic funnels that will drive your customers to convert",
-    href: "#",
+    name: "Hats",
+    href: "/products/hats",
     icon: RefreshIcon,
   },
 ];
 
 const resources = [
   {
-    name: "Help Center",
-    description:
-      "Get all of your questions answered in our forums or contact support.",
-    href: "#",
+    name: "McGolf Collection",
+    href: "/collections/mcgolf",
     icon: SupportIcon,
   },
   {
-    name: "Guides",
-    description:
-      "Learn how to maximize our platform to get the most out of it.",
-    href: "#",
+    name: "Swang Collection",
+    href: "/collections/swang",
     icon: BookmarkAltIcon,
   },
   {
-    name: "Events",
-    description:
-      "See what meet-ups and other events we might be planning near you.",
-    href: "#",
+    name: "OnCourse Collection",
+    href: "/collections/oncourse",
     icon: CalendarIcon,
-  },
-  {
-    name: "Security",
-    description: "Understand how we take your privacy seriously.",
-    href: "#",
-    icon: ShieldCheckIcon,
   },
 ];
 
@@ -161,20 +142,7 @@ export default function MobileNav() {
               </div>
             </div>
             <div className="py-6 px-5 space-y-6">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 dark:text-slate-200 hover:text-gray-700"
-                >
-                  Pricing
-                </a>
-
-                <a
-                  href="#"
-                  className="text-base font-medium text-gray-900 dark:text-slate-200 hover:text-gray-700"
-                >
-                  Docs
-                </a>
+              <div className="grid grid-cols-1 gap-y-4 gap-x-4">
                 {resources.map((item) => (
                   <a
                     key={item.name}
@@ -185,23 +153,11 @@ export default function MobileNav() {
                   </a>
                 ))}
               </div>
-              <div>
-                <a
-                  href="#"
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 dark:bg-indigo-400 hover:bg-indigo-700"
-                >
-                  Sign up
-                </a>
-                <p className="mt-6 text-center text-base font-medium text-gray-500 dark:text-slate-200">
-                  Existing customer?{" "}
-                  <a
-                    href="#"
-                    className="text-indigo-600 dark:text-indigo-400 hover:text-indigo-500"
-                  >
-                    Sign in
-                  </a>
-                </p>
-              </div>
+            </div>
+            <div className="py-6 px-5 space-y-6">
+              <a className="mt-6 text-center text-base font-medium text-gray-500 dark:text-slate-200">
+                About us
+              </a>
             </div>
           </div>
         </Popover.Panel>

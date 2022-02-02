@@ -7,7 +7,7 @@ export default function Home({ products }: any) {
   return (
     <div className="">
       <Head>
-        <title>Modern eCommerce Course</title>
+        <title>McGolf Golf Apparel</title>
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta
           httpEquiv="Content-Type"
@@ -15,21 +15,21 @@ export default function Home({ products }: any) {
         />
         <meta
           name="description"
-          content="Modern eCommerce Development Course focusing on Shopify, Next.js, TailwindCSS, GraphQL. Additional topics include Storefront API, Static Site Generation, getStaticPaths, getStaticProps and more."
+          content="Casual golf focused apparel with cool and unique designed hoodies, sweater, t-shirts, and hats."
         />
-        <meta property="og:title" content="Modern eCommerce Course" />
+        <meta property="og:title" content="McGolf Golf Apparel" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.buildnextshop.com" />
+        <meta property="og:url" content="https://www.mcgolf.com" />
         <meta
           property="og:image"
           content="https://www.buildnextshop.com/share.png"
         />
         <meta
           property="og:description"
-          content="Modern eCommerce Development Course focusing on Shopify, Next.js, TailwindCSS, GraphQL. Additional topics include Storefront API, Static Site Generation, getStaticPaths, getStaticProps and more."
+          content="Casual golf focused apparel with cool and unique designed hoodies, sweater, t-shirts, and hats."
         />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:site_name" content="Modern eCommerce Course" />
+        <meta property="og:site_name" content="Casual golf apparel" />
       </Head>
       <Hero />
       <ProductList products={products} />
