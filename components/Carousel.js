@@ -85,10 +85,12 @@ const Carousel = ({ family, showButtons, nextFamily, prevFamily }) => {
         </div>
       )}
       {showFamily && (
-        <div
-          dangerouslySetInnerHTML={createMarkup()}
-          className="max-w-7xl mt-4 md:w-2/3 mx-auto px-8"
-        ></div>
+        <div className="max-w-6xl w-11/12 mx-auto">
+          <div
+            dangerouslySetInnerHTML={createMarkup()}
+            className="w-full mt-4 md:w-2/3 mx-auto"
+          ></div>
+        </div>
       )}
     </div>
   );
