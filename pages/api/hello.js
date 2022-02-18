@@ -12,6 +12,5 @@ export const getFolderLength = (family) => {
     IMAGE_FOLDER_NAME,
     family
   );
-  console.log(IMAGES_DIRECTORY);
   return fs.readdirSync(IMAGES_DIRECTORY).length;
 };

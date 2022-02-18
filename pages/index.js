@@ -57,8 +57,6 @@ export default function Home({ families }) {
     shuffle();
   }, [selectedFamilies]);
 
-  console.log(randomizedFamilies);
-
   return (
     <div className="bg-green-100 bg-opacity-10 dark:bg-gray-900 min-h-screen pb-12">
       <Head>

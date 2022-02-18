@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
 
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" defaultTheme="light">
       <Head>
         <link rel="shortcut icon" href="/favicon.svg" />
       </Head>
