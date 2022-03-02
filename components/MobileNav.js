@@ -49,7 +49,7 @@ export default function MobileNav({ selectedFamilies, addOrRemoveFamily }) {
       >
         <Popover.Panel
           focus
-          className="absolute top-0 left-0 w-80 p-2 pr-0 transition transform origin-top-right max-h-screen overflow-y-scroll"
+          className="absolute top-0 left-0 w-80 p-2 pr-0 transition transform origin-top-right max-h-[calc(100vh_-_70px)] overflow-y-scroll"
         >
           <div className="rounded-lg h-full shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-slate-700 divide-y-2 divide-gray-50 dark:divide-slate-900">
             <div className="pt-5 pb-6 px-5 h-full">

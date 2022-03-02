@@ -45,10 +45,21 @@ export default function Home({ families }) {
   }
 
   const addOrRemoveFamily = (family) => {
-    if (selectedFamilies.includes(family))
-      setSelectedFamilies(selectedFamilies.filter((item) => item !== family));
-    else {
+    if (selectedFamilies.includes(family)) {
+      const filteredFamilies = selectedFamilies.filter(
+        (item) => item !== family
+      );
+      setSelectedFamilies(filteredFamilies);
+      localStorage.setItem(
+        "selectedFamilies",
+        JSON.stringify(filteredFamilies)
+      );
+    } else {
       setSelectedFamilies([...selectedFamilies, family]);
+      localStorage.setItem(
+        "selectedFamilies",
+        JSON.stringify([...selectedFamilies, family])
+      );
     }
     shuffle();
   };
@@ -56,6 +67,14 @@ export default function Home({ families }) {
   useEffect(() => {
     shuffle();
   }, [selectedFamilies]);
+
+  useEffect(() => {
+    setSelectedFamilies(
+      localStorage.getItem("selectedFamilies")
+        ? JSON.parse(localStorage.getItem("selectedFamilies"))
+        : Object.keys(families)
+    );
+  }, []);
 
   return (
     <div className="bg-green-100 bg-opacity-10 dark:bg-gray-900 min-h-screen pb-12">
