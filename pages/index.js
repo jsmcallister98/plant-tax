@@ -5,6 +5,8 @@ const images = require.context("../public/images", true);
 import { families } from "../data/families";
 import Navbar from "../components/MobileNav";
 import Carousel from "../components/Carousel";
+import { AiFillGithub } from "react-icons/ai";
+import { ImLinkedin2 } from "react-icons/im";
 
 export default function Home({ families }) {
   const [selectedFamilies, setSelectedFamilies] = useState(
@@ -106,20 +108,20 @@ export default function Home({ families }) {
           />
         )}
       </div>
-      <footer class="text-center bg-green-100 bg-opacity-10 dark:bg-gray-900 text-black dark:text-white">
-        <div class="container mx-auto px-6 pt-12">
-          <div class="flex justify-center">
+      <footer className="text-center pt-10 bg-green-100 bg-opacity-10 dark:bg-gray-900 text-black dark:text-white">
+        <div className="container mx-auto px-6 pt-12">
+          <div className="flex justify-center">
             <a
               href="https://www.linkedin.com/in/jacob-mcallister-50a18b174/"
               type="button"
-              className="rounded-full border-2 border-black dark:border-white text-black dark:text-white leading-normal uppercase hover:bg-green-400 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+              className="rounded-full text-black dark:text-white leading-normal uppercase hover:bg-green-400 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
             >
               <svg
                 aria-hidden="true"
                 focusable="false"
                 data-prefix="fab"
                 data-icon="linkedin-in"
-                class="w-3 h-full mx-auto"
+                className="w-4 h-full mx-auto"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 448 512"
@@ -134,14 +136,16 @@ export default function Home({ families }) {
             <a
               href="https://github.com/jsmcallister98/plant-tax"
               type="button"
-              className="rounded-full border-2 border-black dark:border-white text-black dark:text-white leading-normal uppercase hover:bg-green-400 hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+              className="rounded-full text-black dark:text-white leading-normal uppercase hover:bg-green-400 transition duration-150 ease-in-out w-9 h-9 m-1"
             >
               <svg
                 aria-hidden="true"
                 focusable="false"
                 data-prefix="fab"
                 data-icon="github"
-                class="w-3 h-full mx-auto"
+                width={20}
+                height={20}
+                className="w-4 h-full mx-auto"
                 role="img"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 496 512"
